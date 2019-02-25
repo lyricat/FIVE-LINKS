@@ -5,6 +5,7 @@ import argparse
 import re
 import qrcode
 import frontmatter
+from os import path
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", "--input-file", dest="input_file", help="A markdown file", metavar="LOCAL")
@@ -123,7 +124,9 @@ def process_file(options):
             qr.add_data(link)
             qr.make(fit=True)
             img = qr.make_image()
-            img.save('%s/%s.jpg' % (outpath, (i + 1)))
+            _, prefix = path.split(options.input_file)
+            prefix = prefix[2:10]
+            img.save('%s/%s-%s.jpg' % (outpath, prefix, (i + 1)))
     else:
         # generate html file.
         html = to_html(post.content)
@@ -133,6 +136,7 @@ def process_file(options):
             html = re.sub(r'<a href="(?!https://mp.weixin).+?">(.+?)</a>', r'<span>\1</span>', html)
             # stylish hr
             html = html.replace('<hr>', '<div class="hr"><span class="hr-symbol">§</span></div>')
+            # stylish 
             # apply style to other tags
             html = add_styles(html)
         write_file(outpath + '/index.html', html)

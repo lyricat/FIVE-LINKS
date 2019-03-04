@@ -40,7 +40,7 @@ OUT_HTML_FILE_FOOT = '''
 </html>
 '''
 
-FONT_FAMILY = 'font-family: PingFangSC-Light; -webkit-text-stroke-color: rgb(0, 0, 0)'
+FONT_FAMILY = 'font-family: inhert;'
 FONT_FAMILY_ALT = 'font-family:Optima-Regular, PingFangTC-light'
 
 STY_P = 'color:#3f3f3f; font-size: 100%; ' + FONT_FAMILY + '; margin: 0.4em 0 1em 0;'
@@ -71,7 +71,8 @@ wx_html_styles = [
     ('<div class="hr"', STY_HR),
     ('<span class="hr-symbol"', STY_HR_SYMBOL),
     ('<div class="footnote"', DIV_FOOTNOTE),
-    ('<img', STY_IMG_FIXED),
+    # ('<img', STY_IMG_FIXED),
+    ('<img', STY_IMG),
 ]
 
 def load_markdown_file(input_file):

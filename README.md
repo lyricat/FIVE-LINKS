@@ -1,35 +1,25 @@
 # 五条(FIVE-LINKS)
 
-## 阅读五条
+## 这里是？
 
-Visit https://gitpress.io/c/FIVE-LINKS to read articles
+这里是《五条》的所有 Markdown 源码。如果你还不了解五条，可以关注我的公众号 `iamlyricw` 回复 “五条” 查看。
 
-访问 https://gitpress.io/c/FIVE-LINKS 阅读文章，或者微信搜索公众号 `iamlyricw` 关注。
+## 我能做什么？
 
+- 你可以阅读《五条》的文章
+- 你可以对文章进行勘误
+- 你可以[创建 Issue](https://github.com/lyricat/FIVE-LINKS/issues/new)，提交你认为有价值的链接。若链接入选《五条》并且发表，则可获得该期五条的打赏奖励分成，每条链接获得 1/5。
+- 你可以翻译五条中未翻译过的文章，完成后经过我审阅后发表在公众号，翻译者可以获得该期翻译的全部打赏。
 
-## 生成五条
+> 翻译文章版权归翻译者所有，但需授权该翻译内容可在我的公众号和其它内容平台发表。
+> 打赏奖励在发表后 7 个自然日后结算。
 
-生成无样式 HTML 文件
+## 在哪阅读五条？
 
-```bash
-$ ./gears/process.py -t html -f ./source/2018/2018.07.26.md 
-```
+微信搜索公众号 `iamlyricw` 关注，可以阅读所有历史文章。你也可以访问 https://gitpress.io/c/FIVE-LINKS 阅读文章
 
-生成微信公众号排版 HTML 文件
+## 如何参与讨论？
 
-```bash
-$ ./gears/process.py -t wx -f ./source/2018/2018.07.26.md 
-```
-
-根据 Markdown 里独占一行的链接生成 QrCode
-
-```bash
-$ ./gears/process.py -m qr -f ./source/2018/2018.07.26.md 
-```
-
-如果要在微信加 QrCode，需要自己手工去 dist 目录编辑 index.html
-
-## 为啥不定制 render
-
-因为懒...
+- 你可以直接在本 Repo 的 [Issue 列表](https://github.com/lyricat/FIVE-LINKS/issues)进行讨论
+- 也可以关注我的公众号 `iamlyricw`，点击公众号菜单“知识星球”，加入知识星球进行讨论
 
